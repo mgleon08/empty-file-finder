@@ -20,6 +20,8 @@ func main() {
 	}
 
 	for _, file := range files {
-		fmt.Println(file.Name())
+		if file.Size() == 0 {
+			fmt.Println(file.Name())
+		}
 	}
 }
